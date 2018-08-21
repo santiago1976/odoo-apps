@@ -1,0 +1,53 @@
+<openerp>
+	<data>
+	
+	</data>
+	
+	<!-- Nueva vista para contactos -->
+	<record id="contactos_view" model="ir.ui.view">
+		<field name="name">Contactos</field>
+		<field name="model">res.partner</field>
+		<field eval="1" name="priority"/>
+		<field name="arch" type="xml">
+			<tree string="Contactos">
+				<field name="name"/>
+				<field name="parent_id"/>
+				<field name="function"/>
+				<field name="departamento_id"/>
+				<field name="email"/>
+				<field name="phone"/>
+				<field name="mobile"/>
+			</tree>
+		</field>
+	</record>
+	
+	<!-- Busqueda Contactos -->
+	<record model="ir.ui.view" id="contactos_search">
+		<field name="name">Filtro Contactos</field>
+		<field name="model">res.partner</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="parent_id"/>
+				<field name="function"/>
+				<field name="departamento_id"/>
+				<filter string="Contactos" name="todos_contactos" domain="[('is_company','=',False)]"/>
+				<filter string="Por Departamento" name="contactos_por_departamento" domain="[('is_company','=',False)]" context="{'group_by':'departamento_id'}"/>
+				<filter string="Por Función" name="contactos_por_funcion" domain="[('is_company','=',False)]" context="{'group_by':'function'}"/>
+				<filter string="Por Empresa" name="contactos_por_empresa" domain="[('is_company','=',False)]" context="{'group_by':'parent_id'}"/>
+			</search>
+		</field>
+	</record>
+
+	<!-- Accion Contactos -->
+	<record model="ir.actions.act_window" id="contactos_action" >
+		<field name="name">Contactos</field>
+		<field name="res_model">res.partner</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="context">{'search_default_todos_contactos':1}</field>
+	</record>
+	
+	<!-- Menu Contactos -->
+	<menuitem name="Contactos" id="contactos_menu" parent="sales_team.menu_sales" action="contactos_action" sequence="1" />
+	
+</openerp>

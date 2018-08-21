@@ -1,0 +1,33 @@
+<openerp>
+	<data>
+	
+	</data>
+	
+	<!-- Nueva vista para actividades -->
+	<record id="actividades_view" model="ir.ui.view">
+		<field name="name">Actividades</field>
+		<field name="model">crm.activity.report</field>
+		<field eval="1" name="priority"/>
+		<field name="arch" type="xml">
+			<tree string="Actividades">
+				<field name="date"/>
+				<field name="author_id"/>
+				<field name="subtype_id"/>
+				<field name="partner_id"/>
+				<field name="subject"/>
+			</tree>
+		</field>
+	</record>
+	
+	<!-- Accion Actividades -->
+	<record model="ir.actions.act_window" id="actividades_action" >
+		<field name="name">Actividades</field>
+		<field name="res_model">crm.activity.report</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<!-- Menu Actividades -->
+	<menuitem name="Actividades" id="actividades_menu" parent="sales_team.menu_sales" action="actividades_action" sequence="2" />
+	
+</openerp>

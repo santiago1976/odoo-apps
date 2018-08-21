@@ -1,0 +1,20 @@
+<openerp>
+	<data>
+	
+	</data>
+	
+	<!-- Formulario config departamento -->
+	<record model="ir.ui.view" id="view_partner_form_department">
+		<field name="name">Contacto con departamento</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//sheet/group//field[@name='function']" position="after">
+				<field name="departamento_id"
+						placeholder="Departamento"
+						attrs="{'invisible': [('is_company','=', True)]}"/>
+			</xpath>
+		</field>
+	</record>
+	
+</openerp>

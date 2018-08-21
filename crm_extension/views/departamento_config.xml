@@ -1,0 +1,42 @@
+<openerp>
+	<data>
+	
+	</data>
+	
+	<!-- Formulario config departamento -->
+	<record id="form_departamento_config" model="ir.ui.view">
+		<field name="name">Departamento</field>
+		<field name="model">departamento_config</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="name"/>
+				</group>
+			</form>
+		</field>
+	</record>
+	
+	<!-- Vista config departamento -->
+	<record id="view_departamento_config" model="ir.ui.view">
+		<field name="name">Departamentos</field>
+		<field name="model">departamento_config</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Departamentos">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+	
+	<!-- Acción config departamento -->
+	<record id="action_departamento_config" model="ir.actions.act_window">
+		<field name="name">Departamentos</field>
+		<field name="res_model">departamento_config</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<!-- Menú config departamento -->
+	<menuitem action="action_departamento_config" id="menu_departamento_config" parent="sales_team.menu_config_address_book"/>
+	
+</openerp>
