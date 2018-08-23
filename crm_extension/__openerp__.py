@@ -7,6 +7,7 @@
 	'website': "https://es.linkedin.com/in/carbonellsantiago",
 	'category': 'Sales',
 	'version': '0.1',
+	'license': 'AGPL-3',
 	'depends': ['base','crm'],
 	'data': [
 		'security/ir.model.access.csv',
