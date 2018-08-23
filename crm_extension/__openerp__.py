@@ -15,5 +15,6 @@
 		'views/contactos.xml',
 		'views/actividades.xml',
 	],
+	'images': ['static/description/banner.png'],
 	'demo': [],
 }
