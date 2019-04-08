@@ -8,3 +8,8 @@ This repository contains some Odoo modules that you can download and install. Ev
 # crm_extension
 
 This Odoo module is an extension to CRM module adding departments to Contacts and some new views to Contacts and Activities with new filters.
+
+
+# sat_demo
+
+This Odoo module is an app to manage service customer incidence.

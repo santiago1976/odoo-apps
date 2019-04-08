@@ -1,0 +1,136 @@
+<openerp>
+	<data>
+	
+	</data>
+
+	<!-- Menu Principal -->
+	<menuitem name="SAT demo" id="satdemo_menu_principal" sequence="90"/>
+	<menuitem name="Menu" id="satdemo_menu_general" parent="satdemo_menu_principal"/>
+	
+	<!-- Formulario SAT -->
+	<record model="ir.ui.view" id="satdemo_form">
+		<field name="name">Formulario Incidencia</field>
+		<field name="model">sat.demo</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form string="Incidencia">
+				<header>
+					<button string="No iniciado" type="object" name="noiniciado_button" class="oe_highlight" attrs="{'invisible': [('estado','!=','finalizado')]}"/>
+					<button string="En Progreso" type="object" name="enprogreso_button" attrs="{'invisible': [('estado','!=','noiniciado')]}"/>
+					<button string="Finalizado" type="object" name="finalizado_button" attrs="{'invisible': [('estado','!=','enprogreso')]}"/>
+					<button string="Cancelado" type="object" name="cancelado_button" attrs="{'invisible': [('estado','!=','enprogreso')]}"/>
+					<field name="estado" widget="statusbar"/>
+				</header>
+				<sheet>
+					<group>
+						<field name="descripcion"/>
+						<field name="fecha_creacion"/>
+						<field name="cliente"/>
+						<field name="tecnico"/>
+						<field name="garantia"/>
+						<field name="coste_estimado"/>
+						<field name="estado_progreso" widget="selection"/>
+						<field name="factura"/>
+					</group>
+					<notebook>
+						<page string="Sintomas">
+							<group col="2">
+								<field name="sintomas" style="width:75%%" widget="html"/>
+							</group>
+						</page>
+						<page string="Resolución" attrs="{'invisible':[('estado','=', 'noiniciado' )]}">
+							<group col="2">
+								<field name="diagnostico" style="width:75%%" widget="html" />
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	
+	<!-- Vista Listado Todas las Incidencias SAT -->
+	<record model="ir.ui.view" id="satdemo_view">
+		<field name="name">Listado Incidencias</field>
+		<field name="model">sat.demo</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree colors="red:estado in ['noiniciado']" string="Incidencias">
+				<field name="descripcion"/>
+				<field name="fecha_creacion"/>
+				<field name="estado"/>
+				<field name="cliente"/>
+			</tree>
+		</field>
+	</record>
+	
+	<!-- Filtro y búsqueda Listado Todas Incidencias SAT -->
+	<record model="ir.ui.view" id="satdemo_search">
+		<field name="name">Filtro Incidencias</field>
+		<field name="model">sat.demo</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="descripcion"/>
+				<field name="cliente"/>
+				<filter string="No Iniciadas"
+					domain="[('estado','=','noiniciado')]"/>
+				<filter string="En Progreso"
+					domain="[('estado','=','enprogreso')]"/>
+				<filter string="Canceladas"
+					domain="[('estado','=','cancelado')]"/>
+				<filter string="Finalizadas"
+					domain="[('estado','=','finalizado')]"/>
+			</search>
+		</field>
+	</record>
+	
+		<!-- Vista Listado Incidencias por Tecnico SAT -->
+	<record model="ir.ui.view" id="satdemo_view_por_tecnico">
+		<field name="name">Listado Incidencias Por Tecnico</field>
+		<field name="model">sat.demo</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree string="Incidencia">
+				<field name="tecnico"/>
+				<field name="descripcion"/>
+				<field name="fecha_creacion"/>
+				<field name="estado"/>
+				<field name="cliente"/>
+			</tree>
+		</field>
+	</record>
+	
+		<!-- Group by Listado Incidencias por técnico -->
+	<record model="ir.ui.view" id="satdemo_bytecnico_search">
+		<field name="name">Agrupado por Tecnico</field>
+		<field name="model">sat.demo</field>
+		<field name="arch" type="xml">
+			<search>
+				<filter name="grupo_tecnico" string="Agrupar por Tecnico" context="{'group_by':'tecnico'}"/>
+			</search>
+		</field>
+	</record>
+	
+	<!-- Accion Listado Todas Incidencias SAT -->
+	<record model="ir.actions.act_window" id="satdemo_action" >
+		<field name="name">Listado Incidencias</field>
+		<field name="res_model">sat.demo</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	
+	<!-- Accion Listado Incidencias por tecnico SAT -->
+	<record model="ir.actions.act_window" id="satdemo_action_por_tecnico" >
+		<field name="name">Listado Incidencias por Tecnico</field>
+		<field name="res_model">sat.demo</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form</field>
+		<field name="view_id" ref="satdemo_view_por_tecnico"/>
+		<field name="context">{'search_default_grupo_tecnico': 1}</field>
+	</record>
+	
+	<!-- Accion menu Sat -->
+	<menuitem name="Todas las Incidencias" id="satdemo_todas_menu" parent="satdemo_menu_general" action="satdemo_action" sequence="1" />
+	<menuitem name="Incidencias por Técnico" id="satdemo_por_usuario_menu" parent="satdemo_menu_general" action="satdemo_action_por_tecnico" sequence="1" />
+	
+</openerp>

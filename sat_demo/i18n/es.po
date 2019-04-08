@@ -1,0 +1,233 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sat_demo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180307\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-03 11:00+0000\n"
+"PO-Revision-Date: 2019-04-03 11:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_bytecnico_search
+msgid "Agrupar por Tecnico"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_search
+msgid "Canceladas"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_form
+#: selection:sat.demo,estado:0
+msgid "Cancelado"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_cliente
+msgid "Cliente"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_coste_estimado
+msgid "Coste estimado"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_descripcion
+msgid "Descripción"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_diagnostico
+msgid "Diagnóstico"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sat_demo
+#: selection:sat.demo,estado_progreso:0
+msgid "En Diagnóstico"
+msgstr ""
+
+#. module: sat_demo
+#: selection:sat.demo,estado_progreso:0
+msgid "En Espera Cliente"
+msgstr ""
+
+#. module: sat_demo
+#: selection:sat.demo,estado_progreso:0
+msgid "En Espera Pieza"
+msgstr ""
+
+#. module: sat_demo
+#: selection:sat.demo,estado_progreso:0
+msgid "En Facturación"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_form
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_search
+#: selection:sat.demo,estado:0
+msgid "En Progreso"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_estado
+msgid "Estado"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_estado_progreso
+msgid "Estado progreso"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_factura
+msgid "Factura"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_fecha_cierre
+msgid "Fecha Cierre"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_fecha_creacion
+msgid "Fecha Creación"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_search
+msgid "Finalizadas"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_form
+#: selection:sat.demo,estado:0
+msgid "Finalizado"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_garantia
+msgid "Garantia"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_id
+msgid "ID"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_form
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_view_por_tecnico
+msgid "Incidencia"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_view
+msgid "Incidencias"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.menu,name:sat_demo.satdemo_por_usuario_menu
+msgid "Incidencias por Técnico"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.actions.act_window,name:sat_demo.satdemo_action
+msgid "Listado Incidencias"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.actions.act_window,name:sat_demo.satdemo_action_por_tecnico
+msgid "Listado Incidencias por Tecnico"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.menu,name:sat_demo.satdemo_menu_general
+msgid "Menu"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_search
+msgid "No Iniciadas"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_form
+#: selection:sat.demo,estado:0
+msgid "No iniciado"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_form
+msgid "Resolución"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.menu,name:sat_demo.satdemo_menu_principal
+msgid "SAT demo"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.view,arch_db:sat_demo.satdemo_form
+msgid "Sintomas"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_sintomas
+msgid "Síntomas"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.ui.menu,name:sat_demo.satdemo_todas_menu
+msgid "Todas las Incidencias"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model.fields,field_description:sat_demo.field_sat_demo_tecnico
+msgid "Técnico"
+msgstr ""
+
+#. module: sat_demo
+#: model:ir.model,name:sat_demo.model_sat_demo
+msgid "sat.demo"
+msgstr ""
+
