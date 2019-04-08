@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
-	'name': "sat_demo",
-	'summary': """A demo to manage your Customer Service. """,
-	'description': """A demo to manage your Customer Service.""",
+	'name': "sat Demo",
+	'summary': """A demo to manage your Customer Service Incidences. """,
+	'description': """A demo to manage your Customer Service Incidences.""",
 	'author': "Santiago Carbonell Forment",
 	'website': "https://es.linkedin.com/in/carbonellsantiago",
 	'category': 'Sales',
