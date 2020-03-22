@@ -13,3 +13,8 @@ This Odoo module is an extension to CRM module adding departments to Contacts an
 # sat_demo
 
 This Odoo module is an app to manage service customer incidence.
+
+
+# asset_extends
+
+This Odoo module is an extension to Asset module adding assing to and serial number funcionalities.
