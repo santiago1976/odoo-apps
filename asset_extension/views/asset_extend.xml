@@ -1,0 +1,45 @@
+<openerp>
+	<data>
+	
+	</data>
+	
+	<!-- Formulario asset extend -->
+	<record model="ir.ui.view" id="view_asset_form_extend">
+		<field name="model">account.asset.asset</field>
+		<field name="inherit_id" ref="account_asset.view_account_asset_asset_form"/>
+		<field name="arch" type="xml">
+			<field name="date" position="after">
+				<field name="serialnum"/>
+			</field>
+			<field name="serialnum" position="after">
+				<field name="asignadoa"/>
+			</field>
+		</field>
+	</record>
+	
+	<!-- Vista asset extend -->
+	<record model="ir.ui.view" id="view_asset_view_extend">
+		<field name="model">account.asset.asset</field>
+		<field name="inherit_id" ref="account_asset.view_account_asset_asset_purchase_tree"/>
+		<field name="arch" type="xml">
+			<field name="name" position="after">
+				<field name="serialnum"/>
+			</field>
+			<field name="serialnum" position="after">
+				<field name="asignadoa"/>
+			</field>
+		</field>
+	</record>
+	
+	<!-- Search asset extend -->
+	<record model="ir.ui.view" id="search_asset_view_extend">
+		<field name="model">account.asset.asset</field>
+		<field name="inherit_id" ref="account_asset.view_account_asset_search"/>
+		<field name="arch" type="xml">
+			<search>
+				<field name="serialnum"/>
+				<filter string="Por Asignación" name="activos_por_asignacion" context="{'group_by':'asignadoa'}"/>
+			</search>
+		</field>
+	</record>
+</openerp>
