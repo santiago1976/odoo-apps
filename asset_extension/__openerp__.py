@@ -10,7 +10,6 @@
 	'license': 'AGPL-3',
 	'depends': ['base','account_accountant'],
 	'data': [
-		'security/ir.model.access.csv',
 		'views/asset_extend.xml',
 	],
 	'images': ['static/description/banner.png'],
